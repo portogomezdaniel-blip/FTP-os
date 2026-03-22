@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Roadmap de Ejecución — Semana del 21 Marzo 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Mono:wght@300;400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root{--black:#0a0a0a;--white:#f5f2ec;--gold:#c9a84c;--gold-light:#e8c96a;--orange:#d4622a;--green:#4ecb71;--blue:#7ab3e8;--gray:#777;--border:#1e1e1e;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{background:var(--black);color:var(--white);font-family:'DM Mono',monospace;font-size:13px;line-height:1.85;}
+  .wrap{max-width:860px;margin:0 auto;padding:60px 32px 120px;}
+  .chip{display:inline-block;font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);border:1px solid var(--gold);padding:3px 10px;margin-bottom:20px;}
+  h1{font-family:'Syne',sans-serif;font-size:clamp(32px,5vw,52px);font-weight:800;line-height:1;letter-spacing:-.02em;margin-bottom:12px;}
+  h1 em{font-family:'Instrument Serif',serif;font-style:italic;color:var(--gold);font-weight:400;}
+  .lead{color:#999;max-width:600px;font-size:13px;margin-top:10px;}
+  hr{border:none;border-top:1px solid var(--border);margin:48px 0;}
+  h2{font-family:'Syne',sans-serif;font-size:20px;font-weight:700;margin-bottom:14px;}
+  h3{font-family:'Syne',sans-serif;font-size:14px;font-weight:700;color:var(--gold-light);margin:28px 0 10px;}
+  p{color:#999;margin-bottom:14px;}
+  .section{margin-bottom:56px;}
+  .label{font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:10px;margin-bottom:28px;}
+  .label::after{content:'';flex:1;height:1px;background:var(--border);}
+
+  /* DAY CARDS */
+  .day{background:#0f0f0f;margin-bottom:4px;overflow:hidden;}
+  .day-header{padding:16px 24px;border-left:3px solid var(--border);display:flex;align-items:center;gap:16px;cursor:pointer;transition:border-color .2s;}
+  .day-header:hover{border-left-color:var(--gold);}
+  .day-header.active{border-left-color:var(--gold);}
+  .day-num{font-family:'Syne',sans-serif;font-size:11px;font-weight:700;color:var(--gold);min-width:80px;}
+  .day-title{font-family:'Syne',sans-serif;font-size:14px;font-weight:700;color:var(--white);flex:1;}
+  .day-tag{font-size:9px;letter-spacing:.12em;text-transform:uppercase;padding:2px 8px;border-radius:2px;}
+  .tag-code{background:#0a1a0a;color:var(--green);border:1px solid #1a3a1a;}
+  .tag-biz{background:#1a1a0a;color:var(--gold);border:1px solid #2a2a1a;}
+  .tag-content{background:#0a0a1a;color:var(--blue);border:1px solid #1a1a3a;}
+  .day-body{padding:0 24px 20px 24px;border-left:3px solid var(--gold);}
+  .task{color:#888;font-size:12px;padding:8px 0;border-bottom:1px solid #111;display:flex;gap:12px;align-items:flex-start;}
+  .task:last-child{border-bottom:none;}
+  .task-check{color:var(--border);flex-shrink:0;font-size:14px;margin-top:1px;}
+  .task-text strong{color:var(--white);}
+
+  /* MATRIX */
+  .matrix{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-top:20px;}
+  .matrix-cell{background:#0f0f0f;padding:20px 22px;}
+  .matrix-cell h4{font-family:'Syne',sans-serif;font-size:13px;font-weight:700;color:var(--white);margin-bottom:10px;}
+  .matrix-cell p{font-size:12px;color:#777;margin-bottom:0;}
+  .matrix-cell.urgent{border-top:2px solid var(--orange);}
+  .matrix-cell.important{border-top:2px solid var(--gold);}
+  .matrix-cell.delegate{border-top:2px solid var(--blue);}
+  .matrix-cell.drop{border-top:2px solid var(--border);}
+
+  /* WARNINGS */
+  .trap{background:#110808;border-left:3px solid var(--orange);padding:16px 20px;margin:16px 0;font-size:12px;color:#888;}
+  .trap strong{color:var(--orange);display:block;margin-bottom:4px;font-family:'Syne',sans-serif;}
+  .win{background:#080d08;border-left:3px solid var(--green);padding:16px 20px;margin:16px 0;font-size:12px;color:#888;}
+  .win strong{color:var(--green);display:block;margin-bottom:4px;font-family:'Syne',sans-serif;}
+
+  .footer{border-top:1px solid var(--border);padding-top:24px;margin-top:60px;font-size:11px;color:#444;display:flex;justify-content:space-between;}
+  @media(max-width:600px){.matrix{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="chip">DOC 04 — Roadmap de Ejecución</div>
+  <h1>Semana del<br><em>21 Marzo</em><br>2026</h1>
+  <p class="lead">Plan de ejecución día a día para la semana. Dos proyectos en paralelo con Claude Code (Panel de Creadores) y Claude AI (Food Trucks + contenido Mauro). Orden de operaciones claro para evitar el scatter del TDAH.</p>
+
+  <hr>
+
+  <!-- NORTE DE LA SEMANA -->
+  <div class="section">
+    <div class="label">00 — Norte de la semana</div>
+    <h2>Una semana, dos victorias concretas.</h2>
+    <p>Al finalizar esta semana, el resultado tiene que ser exactamente esto y nada más: el Panel de Creadores con auth + Instagram API funcionando en producción, y Mauro con su primer mes de calendario de contenido cargado y listo para ejecutar. Todo lo demás es secundario.</p>
+    <p>La tentación va a ser querer construir 5 cosas al mismo tiempo porque todas son interesantes. La disciplina esta semana es terminar antes de empezar. Mauro con el panel funcionando es el primer caso de éxito del Digital Operator Pack — ese caso de éxito vale más que cualquier otra feature nueva.</p>
+
+    <div class="win">
+      <strong>Victoria 1 — Panel de Creadores usable</strong>
+      Auth funcionando, Instagram API conectada, calendario de 30 días de Mauro cargado. Deployed en Vercel. Mauro puede entrar, ver sus métricas, y seguir su plan de contenido.
+    </div>
+    <div class="win">
+      <strong>Victoria 2 — Mauro activado</strong>
+      Mauro está publicando con el sistema. Tiene su hook del primer Reel. Sabe exactamente qué publicar los próximos 30 días. Andrea Engine está listo para manejar sus DMs.
+    </div>
+  </div>
+
+  <!-- PLAN DÍA A DÍA -->
+  <div class="section">
+    <div class="label">01 — Plan día a día</div>
+    <h2>Lo que pasa cada día.</h2>
+
+    <div class="day">
+      <div class="day-header active">
+        <div class="day-num">Sáb 21</div>
+        <div class="day-title">Setup + Auth + Diagnóstico del repo</div>
+        <span class="day-tag tag-code">Claude Code</span>
+      </div>
+      <div class="day-body">
+        <div class="task"><div class="task-check">□</div><div class="task-text"><strong>Abrir el repo en Claude Code</strong> y pegar el Prompt 01 (diagnóstico completo). Dejar que analice toda la estructura antes de tocar nada.</div></div>
+        <div class="task"><div class="task-check">□</div><div class="task-text"><strong>Crear proyecto en Supabase</strong> — supabase.com, nuevo proyecto, copiar credenciales al .env.local</div></div>
+        <div class="task"><div class="task-check">□</div><div class="task-text"><strong>Implementar auth completo</strong> con el Prompt 02. Email + password + Google OAuth + protección de rutas.</div></div>
+        <div class="task"><div class="task-check">□</div><div class="task-text"><strong>Verificar que el auth funciona</strong> — crear una cuenta de prueba, hacer login, hacer logout, verificar que las rutas redirigen sin sesión.</div></div>
+        <div class="task"><div class="task-check">□</div><div class="task-text"><strong>Deploy con el auth</strong> — push a main, verificar que el build pasa en Vercel, agregar las variables de entorno en Vercel Settings.</div></div>
+      </div>
+    </div>
+
+    <div class="day">
+      <div class="day-header">
+        <div class="day-num">Dom 22</div>
+        <div class="day-title">Meta App + Instagram API</div>
+        <span class="day-tag tag-code">Claude Code</span>
+      </div>
+      <div class="day-body">
+        <div class="task"><div class="task-check">□</div><div class="task-text"><strong>Crear la Meta App</strong> en developers.facebook.com. Tipo: Business. Producto: Instagram Graph API. Guardar App ID y App Secret.</div></div>
+        <div class="task"><div class="task-check">□</div><div class="task-text"><strong>Configurar redirect URIs</strong> en la Meta App apuntando a la URL de producción de Vercel.</div></div>
+        <div class="task"><div class="task-check">□</div><div class="task-text"><strong>Implementar Instagram OAuth</strong> con el Prompt 03. El flujo de conexión de cuenta + guardado del token en Supabase.</div></div>
+        <div class="task"><div class="task-check">□</div><div class="task-text"><strong>Testear con cuenta propia</strong> — conectar tu propia cuenta de Instagram Business antes de mandarlo a Mauro. Verificar que las métricas cargan.</div></div>
+        <div class="task"><div class="task-check">□</div><div class="task-text"><strong>Si la API de Meta requiere aprobación</strong> (para permisos avanzados), usar el modo de desarrollo mientras tanto con tu cuenta de prueba.</div></div>
+      </div>
+    </div>
+
+    <div class="day">
+      <div class="day-header">
+        <div class="day-num">Lun 23</div>
+        <div class="day-title">Calendario de Mauro + Primera sesión con él</div>
+        <span class="day-tag tag-biz">Mauro</span>
+      </div>
+      <div class="day-body">
+        <div class="task"><div class="task-check">□</div><div class="task-text"><strong>Implementar el sistema de calendario</strong> con el Prompt 04. Los 30 días de contenido de Mauro precargados.</div></div>
+        <div class="task"><div class="task-check">□</div><div class="task-text"><strong>Crear la cuenta de Mauro</strong> en el panel. Cargar sus 30 días de contenido. Verificar que todo se ve bien.</div></div>
+        <div class="task"><div class="task-check">□</div><div class="task-text"><strong>Llamada con Mauro</strong> — mostrarle el panel en vivo. Walk-through completo: login, ver calendario, ver las instrucciones de cada post, ver el estado de Instagram.</div></div>
+        <div class="task"><div class="task-check">□</div><div class="task-text"><strong>Hacer que conecte su Instagram</strong> en la llamada para que vea sus métricas reales en tiempo real. Ese es el momento wow.</div></div>
+      </div>
+    </div>
+
+    <div class="day">
+      <div class="day-header">
+        <div class="day-num">Mar 24</div>
+        <div class="day-title">Food Trucks Backend (con Claude AI)</div>
+        <span class="day-tag tag-code">Claude AI</span>
+      </div>
+      <div class="day-body">
+        <div class="task"><div class="task-check">□</div><div class="task-text"><strong>Lista de features que faltan</strong> en Food Trucks — hacer el inventario completo antes de empezar a codear.</div></div>
+        <div class="task"><div class="task-check">□</div><div class="task-text"><strong>Backend mínimo viable</strong> — lo que hace que la plataforma sea cobrable. Probablemente: sistema de registro de food trucks, gestión de menú dinámico, formulario de contacto con notificaciones.</div></div>
+        <div class="task"><div class="task-check">□</div><div class="task-text"><strong>Deploy y verificación</strong> del proyecto de Food Trucks con las nuevas features.</div></div>
+      </div>
+    </div>
+
+    <div class="day">
+      <div class="day-header">
+        <div class="day-num">Mié 25</div>
+        <div class="day-title">Sistema de contenido de Mauro activado</div>
+        <span class="day-tag tag-content">Contenido</span>
+      </div>
+      <div class="day-body">
+        <div class="task"><div class="task-check">□</div><div class="task-text"><strong>Verificar que Mauro publicó su primer post</strong> — si no lo ha hecho, sesión de apoyo para grabar y publicar su primer Reel de identidad.</div></div>
+        <div class="task"><div class="task-check">□</div><div class="task-text"><strong>Setup de Andrea Engine</strong> para Mauro — configurar las respuestas automáticas a DMs entrantes basadas en los hooks de sus primeros Reels.</div></div>
+        <div class="task"><div class="task-check">□</div><div class="task-text"><strong>Documentar el caso de uso de Mauro</strong> — empezar a escribir el caso de éxito que vas a usar para conseguir los siguientes 3 clientes del Digital Operator Pack.</div></div>
+      </div>
+    </div>
+
+    <div class="day">
+      <div class="day-header">
+        <div class="day-num">Jue–Vie</div>
+        <div class="day-title">Cierre, revisión y preparación semana 2</div>
+        <span class="day-tag tag-biz">Review</span>
+      </div>
+      <div class="day-body">
+        <div class="task"><div class="task-check">□</div><div class="task-text"><strong>Review de la semana</strong> — ¿cuáles de las dos victorias se cumplieron? ¿Qué quedó pendiente?</div></div>
+        <div class="task"><div class="task-check">□</div><div class="task-text"><strong>Preparar el pitch del Digital Operator Pack</strong> para los siguientes 2–3 entrenadores. El caso de Mauro es tu proof of concept.</div></div>
+        <div class="task"><div class="task-check">□</div><div class="task-text"><strong>Definir norte de la semana 2</strong> — ¿primer cliente pagante del Digital Operator Pack? ¿Más features del panel? ¿Primera venta de Food Trucks?</div></div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- MATRIZ DE PRIORIDADES -->
+  <div class="section">
+    <div class="label">02 — Matriz de prioridades</div>
+    <h2>Qué hacer, qué delegar, qué ignorar.</h2>
+
+    <div class="matrix">
+      <div class="matrix-cell urgent">
+        <h4>🔴 Urgente + Importante</h4>
+        <p>Auth del panel. Instagram API. Primer post de Mauro. Deploy estable. Estas cosas bloquean todo lo demás si no se resuelven.</p>
+      </div>
+      <div class="matrix-cell important">
+        <h4>🟡 Importante pero no urgente</h4>
+        <p>Sistema de recursos del panel. Email sequences. Lead magnet de Mauro. Food Trucks backend. Buscar nuevos clientes para el Digital Operator Pack.</p>
+      </div>
+      <div class="matrix-cell delegate">
+        <h4>🔵 Urgente pero delegable</h4>
+        <p>Producción visual de los carruseles de Mauro (Canva). Transcripción y edición de Reels. Respuestas a DMs básicos (Andrea Engine).</p>
+      </div>
+      <div class="matrix-cell drop">
+        <h4>⚫ Ni urgente ni importante</h4>
+        <p>Nuevas features del panel que Mauro no necesita todavía. Investigar herramientas nuevas. Consumir más contenido sobre sistemas de infoproductores.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- TRAMPAS DEL TDAH -->
+  <div class="section">
+    <div class="label">03 — Trampas a evitar esta semana</div>
+    <h2>Los patrones que matan el momentum.</h2>
+
+    <div class="trap">
+      <strong>Trampa 1 — Empezar una tercera cosa antes de terminar las dos</strong>
+      Esta semana son dos victorias: panel funcionando + Mauro activado. Si aparece una idea nueva (suplementos, nuevo cliente, nueva feature), se anota y va para la semana que viene. No esta semana.
+    </div>
+    <div class="trap">
+      <strong>Trampa 2 — Perfeccionar el panel antes de mostrárselo a Mauro</strong>
+      El panel no tiene que estar perfecto para mostrárselo. Tiene que funcionar. El feedback de Mauro en vivo vale más que 3 días más de desarrollo en solitario.
+    </div>
+    <div class="trap">
+      <strong>Trampa 3 — Quedarse pegado en un error de la API de Meta</strong>
+      La API de Instagram/Meta puede ser frustrante. Si Claude Code lleva más de 45 minutos en el mismo problema, escalar el error aquí en Claude AI para diagnóstico antes de seguir. No pelear solo con la documentación de Meta.
+    </div>
+    <div class="trap">
+      <strong>Trampa 4 — Construir para el cliente hipotético en lugar de para Mauro</strong>
+      Cada feature del panel esta semana se valida con una pregunta: ¿Mauro necesita esto esta semana? Si la respuesta es no, va para después. El over-engineering es la forma más elegante de evitar mostrar el producto.
+    </div>
+  </div>
+
+  <!-- ÍNDICE DE DOCUMENTOS -->
+  <div class="section">
+    <div class="label">04 — Índice de documentos del kit</div>
+    <h2>Los 5 archivos de esta sesión.</h2>
+    <p>Todos los documentos de esta sesión están en el mismo directorio. Si vas a abrir una nueva sesión en cualquier terminal, la secuencia es: leer primero el 00_master_brief para reconstruir el contexto completo, luego el documento específico del proyecto en el que vas a trabajar.</p>
+    <p>El archivo 00_master_brief.html es el mapa del holding completo — el punto de entrada para cualquier sesión nueva. El 01_carrizo_blueprint.html tiene todos los datos del sistema Carrizo para usarlos en el trabajo con Mauro o en la venta del Digital Operator Pack. El 02_digital_operator_pack.html es el producto estructurado con precios, fases y entregables. El 03_claude_code_prompts.html tiene los prompts exactos para pegar en Claude Code en orden de ejecución. Y este documento, el 04_execution_roadmap.html, es el plan de acción día a día.</p>
+  </div>
+
+  <div class="footer">
+    <span>Roadmap de Ejecución v1.0 — Semana 21 Marzo 2026</span>
+    <span>Generado con Claude AI — Holding IA Allver</span>
+  </div>
+
+</div>
+</body>
+</html>

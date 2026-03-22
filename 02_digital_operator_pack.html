@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Digital Operator Pack — Producto Completo</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Mono:wght@300;400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black: #0a0a0a;
+    --white: #f5f2ec;
+    --cream: #f0ebe0;
+    --gold: #c9a84c;
+    --gold-light: #e8c96a;
+    --orange: #d4622a;
+    --gray: #888;
+    --border: #222;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--black);
+    color: var(--white);
+    font-family: 'DM Mono', monospace;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .page-wrap {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 60px 32px 120px;
+  }
+
+  /* HEADER */
+  .header {
+    border-bottom: 1px solid #222;
+    padding-bottom: 48px;
+    margin-bottom: 64px;
+  }
+
+  .tag {
+    display: inline-block;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    border: 1px solid var(--gold);
+    padding: 4px 12px;
+    margin-bottom: 24px;
+  }
+
+  h1 {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(36px, 6vw, 64px);
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    color: var(--white);
+    margin-bottom: 16px;
+  }
+
+  h1 span {
+    color: var(--gold);
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    font-weight: 400;
+  }
+
+  .subtitle {
+    color: var(--gray);
+    font-size: 13px;
+    max-width: 560px;
+    margin-top: 16px;
+  }
+
+  .price-tag {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--black);
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: 20px;
+    padding: 8px 20px;
+    margin-top: 24px;
+  }
+
+  /* SECTION */
+  .section {
+    margin-bottom: 72px;
+  }
+
+  .section-label {
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 32px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .section-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: #222;
+  }
+
+  h2 {
+    font-family: 'Syne', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin-bottom: 8px;
+  }
+
+  h3 {
+    font-family: 'Syne', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--gold-light);
+    margin-bottom: 12px;
+    margin-top: 32px;
+  }
+
+  p {
+    color: #aaa;
+    margin-bottom: 16px;
+  }
+
+  /* PHASE CARDS */
+  .phases {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin-top: 32px;
+  }
+
+  .phase {
+    background: #111;
+    border-left: 3px solid #222;
+    padding: 28px 32px;
+    transition: border-color 0.2s;
+    position: relative;
+  }
+
+  .phase:hover {
+    border-left-color: var(--gold);
+  }
+
+  .phase-num {
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    color: var(--gold);
+    margin-bottom: 8px;
+    display: block;
+  }
+
+  .phase-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 12px;
+  }
+
+  .phase-time {
+    position: absolute;
+    top: 28px;
+    right: 32px;
+    font-size: 11px;
+    color: var(--gray);
+    background: #1a1a1a;
+    padding: 3px 10px;
+    border: 1px solid #2a2a2a;
+  }
+
+  .phase-items {
+    list-style: none;
+    margin-top: 16px;
+  }
+
+  .phase-items li {
+    color: #888;
+    font-size: 12px;
+    padding: 6px 0;
+    border-bottom: 1px solid #1a1a1a;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .phase-items li::before {
+    content: '→';
+    color: var(--gold);
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  .phase-items li span {
+    color: var(--white);
+    font-weight: 500;
+  }
+
+  .phase-ai-note {
+    margin-top: 16px;
+    padding: 12px 16px;
+    background: #0f0f0f;
+    border: 1px solid #1e1e1e;
+    font-size: 11px;
+    color: var(--gold);
+  }
+
+  .phase-ai-note strong {
+    color: var(--gold-light);
+  }
+
+  /* DELIVERABLES TABLE */
+  .deliverables {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 24px;
+    font-size: 12px;
+  }
+
+  .deliverables th {
+    text-align: left;
+    padding: 10px 16px;
+    background: #111;
+    color: var(--gold);
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    border-bottom: 1px solid #222;
+  }
+
+  .deliverables td {
+    padding: 12px 16px;
+    border-bottom: 1px solid #161616;
+    color: #999;
+    vertical-align: top;
+  }
+
+  .deliverables td:first-child {
+    color: var(--white);
+    font-weight: 500;
+  }
+
+  .deliverables tr:hover td {
+    background: #0d0d0d;
+  }
+
+  .badge {
+    display: inline-block;
+    font-size: 9px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 2px 8px;
+    border-radius: 2px;
+  }
+
+  .badge-ai { background: #1a1a0a; color: var(--gold); border: 1px solid #2a2a1a; }
+  .badge-human { background: #0a1a1a; color: #4ecdc4; border: 1px solid #1a2a2a; }
+  .badge-tool { background: #1a0a1a; color: #c45ecb; border: 1px solid #2a1a2a; }
+
+  /* PRICING */
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2px;
+    margin-top: 24px;
+  }
+
+  @media (max-width: 640px) {
+    .pricing-grid { grid-template-columns: 1fr; }
+  }
+
+  .price-card {
+    background: #111;
+    padding: 28px 24px;
+    border-top: 3px solid #222;
+  }
+
+  .price-card.featured {
+    background: #141200;
+    border-top-color: var(--gold);
+  }
+
+  .price-card .amount {
+    font-family: 'Syne', sans-serif;
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--white);
+    margin-bottom: 4px;
+  }
+
+  .price-card .amount span {
+    font-size: 14px;
+    color: var(--gray);
+    font-weight: 400;
+  }
+
+  .price-card .plan-name {
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 20px;
+  }
+
+  .price-card ul {
+    list-style: none;
+    font-size: 11px;
+    color: #777;
+  }
+
+  .price-card ul li {
+    padding: 5px 0;
+    border-bottom: 1px solid #1a1a1a;
+  }
+
+  .price-card ul li.included {
+    color: #aaa;
+  }
+
+  /* STACK */
+  .stack-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    margin-top: 24px;
+  }
+
+  .stack-item {
+    background: #111;
+    padding: 20px 24px;
+    font-size: 12px;
+  }
+
+  .stack-item .tool-name {
+    font-family: 'Syne', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 6px;
+  }
+
+  .stack-item .tool-role {
+    color: var(--gray);
+    font-size: 11px;
+  }
+
+  /* KPIs */
+  .kpis {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2px;
+    margin-top: 24px;
+  }
+
+  @media (max-width: 640px) {
+    .kpis { grid-template-columns: 1fr 1fr; }
+    .stack-grid { grid-template-columns: 1fr; }
+  }
+
+  .kpi {
+    background: #111;
+    padding: 24px 20px;
+    text-align: center;
+  }
+
+  .kpi .kpi-val {
+    font-family: 'Syne', sans-serif;
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--gold);
+    display: block;
+    margin-bottom: 6px;
+  }
+
+  .kpi .kpi-label {
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gray);
+  }
+
+  /* ERRORS */
+  .errors {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin-top: 24px;
+  }
+
+  .error-item {
+    background: #110808;
+    border-left: 3px solid var(--orange);
+    padding: 16px 20px;
+    font-size: 12px;
+    color: #888;
+  }
+
+  .error-item strong {
+    color: var(--orange);
+    display: block;
+    margin-bottom: 4px;
+    font-family: 'Syne', sans-serif;
+    font-size: 13px;
+  }
+
+  /* PITCH */
+  .pitch-box {
+    background: #0d0d00;
+    border: 1px solid var(--gold);
+    padding: 32px;
+    margin-top: 24px;
+    font-size: 13px;
+    line-height: 1.9;
+    color: #bbb;
+    font-family: 'Instrument Serif', serif;
+    font-size: 18px;
+  }
+
+  .pitch-box strong {
+    color: var(--gold-light);
+  }
+
+  /* FOOTER */
+  .footer {
+    border-top: 1px solid #1a1a1a;
+    padding-top: 32px;
+    margin-top: 80px;
+    font-size: 11px;
+    color: #444;
+    display: flex;
+    justify-content: space-between;
+  }
+</style>
+</head>
+<body>
+<div class="page-wrap">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="tag">Producto v1.0 — Confidencial</div>
+    <h1>Digital<br><span>Operator</span><br>Pack</h1>
+    <p class="subtitle">Sistema completo para transformar entrenadores presenciales de LATAM en operadores digitales de alto ticket. Construido sobre el Sistema Carrizo + Stack de IA.</p>
+    <div class="price-tag">$1,500 — $3,000 USD</div>
+  </div>
+
+  <!-- FILOSOFÍA -->
+  <div class="section">
+    <div class="section-label">01 — Filosofía del producto</div>
+    <h2>No vendemos marketing.<br>Entregamos el sistema completo.</h2>
+    <p>El entrenador que viene a nosotros tiene un problema claro: sabe entrenar, tiene resultados, tiene reconocimiento local — pero no tiene presencia digital ni tiempo para construirla. Nosotros no le enseñamos cómo hacerlo. Se lo hacemos.</p>
+    <p>La diferencia con Carrizo: él vende conocimiento. Nosotros vendemos ejecución + IA. El entrenador solo graba, aparece y entrena. Nosotros hacemos el resto.</p>
+
+    <div class="pitch-box">
+      "Llevas años construyendo un físico y una reputación en Medellín. Pero tu ingreso sigue atado a tus horas. <strong>Nosotros te construimos el sistema digital</strong> que trabaja cuando tú entrenas, cuando duermes, cuando estás con tu familia. No te enseñamos a hacerlo — <strong>lo hacemos contigo en 30 días.</strong>"
+    </div>
+  </div>
+
+  <!-- FASES -->
+  <div class="section">
+    <div class="section-label">02 — Fases de entrega</div>
+    <h2>El sistema en 5 fases.</h2>
+    <p>Cada fase tiene un entregable concreto. El cliente ve progreso cada semana.</p>
+
+    <div class="phases">
+
+      <div class="phase">
+        <div class="phase-time">Días 1–3</div>
+        <span class="phase-num">FASE 00</span>
+        <div class="phase-title">Diagnóstico y Moat Personal</div>
+        <p style="color:#666;font-size:12px;">Encontrar la verdad radical del entrenador — su historia, su adversidad, su diferenciador real.</p>
+        <ul class="phase-items">
+          <li><span>Llamada de diagnóstico 60 min</span> — entrevista profunda con preguntas del Método Old Kid</li>
+          <li><span>Auditoría de crisis personal</span> — qué habilidad le permitió superar su punto más bajo</li>
+          <li><span>Definición del Micro-micronicho</span> — el avatar quirúrgico que cobra high-ticket</li>
+          <li><span>Borrador de identidad de marca</span> — voz, valores no negociables, territorio</li>
+        </ul>
+        <div class="phase-ai-note">
+          <strong>⚡ IA:</strong> Claude procesa la entrevista y genera el brief completo de identidad en 2h — lo que Carrizo dice que toma 1 semana.
+        </div>
+      </div>
+
+      <div class="phase">
+        <div class="phase-time">Días 4–10</div>
+        <span class="phase-num">FASE 01</span>
+        <div class="phase-title">Identidad Digital y Oferta High-Ticket</div>
+        <p style="color:#666;font-size:12px;">Construir la base matemática: Avatar + Oferta + Comunicación. Sin esto nada escala.</p>
+        <ul class="phase-items">
+          <li><span>Avatar worksheet completo</span> — problemas, deseos, objeciones, lenguaje exacto</li>
+          <li><span>Oferta High-Ticket definida</span> — nombre, promesa, precio, estructura del programa</li>
+          <li><span>Bio y perfil de Instagram</span> — optimizado para convertir visitas en DMs</li>
+          <li><span>Guía de comunicación</span> — tono, temas permitidos, temas prohibidos</li>
+        </ul>
+        <div class="phase-ai-note">
+          <strong>⚡ IA:</strong> Avatar y oferta se generan con Claude en sesión de 2h con el cliente. Entregable listo mismo día.
+        </div>
+      </div>
+
+      <div class="phase">
+        <div class="phase-time">Días 11–20</div>
+        <span class="phase-num">FASE 02</span>
+        <div class="phase-title">Sistema de Contenido Instagram (30 días)</div>
+        <p style="color:#666;font-size:12px;">El motor orgánico que atrae leads calificados sin pagar ads.</p>
+        <ul class="phase-items">
+          <li><span>30 hooks de Reels</span> — basados en identidad real, no guiones genéricos</li>
+          <li><span>8 carruseles de autoridad</span> — social proof, método, resultados</li>
+          <li><span>Calendario editorial mes 1</span> — qué publicar cada día y cuándo</li>
+          <li><span>Guía de Stories</span> — cómo generar DMs diarios sin vender directo</li>
+          <li><span>Setup Dampa Account</span> — entrenamiento del algoritmo con referentes</li>
+        </ul>
+        <div class="phase-ai-note">
+          <strong>⚡ IA:</strong> El calendario completo + hooks generados con Claude. El entrenador solo graba. Andrea Engine gestiona respuestas a DMs.
+        </div>
+      </div>
+
+      <div class="phase">
+        <div class="phase-time">Días 18–25</div>
+        <span class="phase-num">FASE 03</span>
+        <div class="phase-title">Funnel, Lead Magnet y Landing</div>
+        <p style="color:#666;font-size:12px;">El sistema que vende mientras el entrenador duerme.</p>
+        <ul class="phase-items">
+          <li><span>Landing page completa</span> — diseño, copy, formulario de captura</li>
+          <li><span>Lead magnet digital</span> — PDF, guía o mini-curso de alta percepción de valor</li>
+          <li><span>Video de Nutrición (Loom)</span> — estructura del video de 27–31 min que crea deuda psicológica</li>
+          <li><span>Secuencia de email x5</span> — nurturing post lead magnet hasta la llamada</li>
+          <li><span>Página de agendamiento</span> — integrada con calendario y confirmación automática</li>
+        </ul>
+        <div class="phase-ai-note">
+          <strong>⚡ IA:</strong> Landing + lead magnet construidos con Claude Code. Email sequence generada y personalizada. Deployed en Vercel mismo día.
+        </div>
+      </div>
+
+      <div class="phase">
+        <div class="phase-time">Días 26–30</div>
+        <span class="phase-num">FASE 04</span>
+        <div class="phase-title">Activación y Primeras Ventas</div>
+        <p style="color:#666;font-size:12px;">El cliente no termina con un sistema — termina con sus primeras conversaciones de venta activas.</p>
+        <ul class="phase-items">
+          <li><span>Script de DMs</span> — cómo calificar y mover a llamada sin sonar vendedor</li>
+          <li><span>Guión de llamada de cierre</span> — estructura de 45 min para cerrar high-ticket</li>
+          <li><span>Setup Andrea Engine</span> — automatización de respuestas iniciales en Instagram DMs</li>
+          <li><span>Sesión de roleplaying</span> — practicamos el cierre en vivo antes de lanzar</li>
+          <li><span>Dashboard de métricas</span> — RADAR simplificado para semana 1</li>
+        </ul>
+        <div class="phase-ai-note">
+          <strong>⚡ IA:</strong> Andrea Engine entra como setter. El entrenador solo habla con leads que ya están calificados y agendados.
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- DELIVERABLES -->
+  <div class="section">
+    <div class="section-label">03 — Entregables</div>
+    <h2>Qué recibe el cliente.</h2>
+
+    <table class="deliverables">
+      <thead>
+        <tr>
+          <th>Entregable</th>
+          <th>Formato</th>
+          <th>Ejecutado por</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Brief de identidad y moat personal</td><td>Documento PDF</td><td><span class="badge badge-ai">IA + tú</span></td></tr>
+        <tr><td>Avatar worksheet completo</td><td>Documento editable</td><td><span class="badge badge-ai">IA</span></td></tr>
+        <tr><td>Oferta High-Ticket estructurada</td><td>Documento PDF</td><td><span class="badge badge-ai">IA + tú</span></td></tr>
+        <tr><td>Bio y perfil Instagram optimizado</td><td>Texto listo para copiar</td><td><span class="badge badge-ai">IA</span></td></tr>
+        <tr><td>30 hooks de Reels</td><td>Google Doc</td><td><span class="badge badge-ai">IA</span></td></tr>
+        <tr><td>8 carruseles de autoridad</td><td>Canva editable</td><td><span class="badge badge-ai">IA + Canva</span></td></tr>
+        <tr><td>Calendario editorial mes 1</td><td>Notion / Google Sheets</td><td><span class="badge badge-ai">IA</span></td></tr>
+        <tr><td>Landing page deployada</td><td>URL en vivo (Vercel)</td><td><span class="badge badge-tool">Claude Code</span></td></tr>
+        <tr><td>Lead magnet digital</td><td>PDF diseñado</td><td><span class="badge badge-tool">Claude + Canva</span></td></tr>
+        <tr><td>Secuencia email x5</td><td>Texto + integración</td><td><span class="badge badge-ai">IA</span></td></tr>
+        <tr><td>Script de DMs</td><td>Documento listo</td><td><span class="badge badge-ai">IA</span></td></tr>
+        <tr><td>Guión de llamada de cierre</td><td>Documento PDF</td><td><span class="badge badge-human">Tú + IA</span></td></tr>
+        <tr><td>Setup Andrea Engine (setter)</td><td>Bot activo en DMs</td><td><span class="badge badge-tool">Andrea Engine</span></td></tr>
+        <tr><td>Dashboard RADAR básico</td><td>Notion template</td><td><span class="badge badge-tool">Claude Code</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- PRICING -->
+  <div class="section">
+    <div class="section-label">04 — Precios</div>
+    <h2>Tres niveles, un sistema.</h2>
+
+    <div class="pricing-grid">
+      <div class="price-card">
+        <div class="plan-name">Starter</div>
+        <div class="amount">$1,500 <span>USD</span></div>
+        <ul>
+          <li class="included">Fases 00 + 01 + 02</li>
+          <li class="included">Landing básica</li>
+          <li class="included">30 hooks de Reels</li>
+          <li>Sin Andrea Engine</li>
+          <li>Sin email sequence</li>
+          <li>1 sesión de estrategia</li>
+        </ul>
+      </div>
+
+      <div class="price-card featured">
+        <div class="plan-name">★ Operador</div>
+        <div class="amount">$2,500 <span>USD</span></div>
+        <ul>
+          <li class="included">Todas las fases (00–04)</li>
+          <li class="included">Landing completa deployada</li>
+          <li class="included">Lead magnet + funnel</li>
+          <li class="included">Andrea Engine activado</li>
+          <li class="included">Email sequence x5</li>
+          <li class="included">3 sesiones de estrategia</li>
+        </ul>
+      </div>
+
+      <div class="price-card">
+        <div class="plan-name">Growth</div>
+        <div class="amount">$3,500 <span>USD</span></div>
+        <ul>
+          <li class="included">Todo Operador +</li>
+          <li class="included">Acompañamiento 60 días</li>
+          <li class="included">Revisión de contenido mensual</li>
+          <li class="included">Optimización de funnel</li>
+          <li class="included">Soporte Andrea Engine</li>
+          <li class="included">Sesiones ilimitadas mes 1</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- STACK -->
+  <div class="section">
+    <div class="section-label">05 — Stack tecnológico</div>
+    <h2>Las herramientas del sistema.</h2>
+
+    <div class="stack-grid">
+      <div class="stack-item">
+        <div class="tool-name">Claude AI / Claude Code</div>
+        <div class="tool-role">Generación de contenido, copy, código, landing pages, automatizaciones</div>
+      </div>
+      <div class="stack-item">
+        <div class="tool-name">Andrea Engine</div>
+        <div class="tool-role">Setter automático en Instagram DMs — califica, responde, agenda</div>
+      </div>
+      <div class="stack-item">
+        <div class="tool-name">Vercel</div>
+        <div class="tool-role">Deploy instantáneo de landing pages y apps del cliente</div>
+      </div>
+      <div class="stack-item">
+        <div class="tool-name">Supabase</div>
+        <div class="tool-role">Auth, base de datos de leads, CRM ligero</div>
+      </div>
+      <div class="stack-item">
+        <div class="tool-name">Notion</div>
+        <div class="tool-role">Dashboard operativo del cliente — RADAR, calendario, SOPs</div>
+      </div>
+      <div class="stack-item">
+        <div class="tool-name">Canva / CapCut</div>
+        <div class="tool-role">Producción visual de carruseles, thumbnails y templates</div>
+      </div>
+      <div class="stack-item">
+        <div class="tool-name">Loom / YouTube</div>
+        <div class="tool-role">Video de nutrición — el activo que crea deuda psicológica</div>
+      </div>
+      <div class="stack-item">
+        <div class="tool-name">Cal.com / Calendly</div>
+        <div class="tool-role">Agendamiento automático post-funnel sin fricción</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- KPIS -->
+  <div class="section">
+    <div class="section-label">06 — Métricas de éxito</div>
+    <h2>Cómo medimos que funciona.</h2>
+
+    <div class="kpis">
+      <div class="kpi">
+        <span class="kpi-val">5–10</span>
+        <span class="kpi-label">DMs/día semana 2</span>
+      </div>
+      <div class="kpi">
+        <span class="kpi-val">30%</span>
+        <span class="kpi-label">Set Rate mínimo</span>
+      </div>
+      <div class="kpi">
+        <span class="kpi-val">1–3</span>
+        <span class="kpi-label">Cierres mes 1</span>
+      </div>
+      <div class="kpi">
+        <span class="kpi-val">30d</span>
+        <span class="kpi-label">De 0 a sistema live</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ERRORES -->
+  <div class="section">
+    <div class="section-label">07 — Errores que prevenimos</div>
+    <h2>Por qué el 90% falla sin esto.</h2>
+
+    <div class="errors">
+      <div class="error-item">
+        <strong>Inautenticidad</strong>
+        Copiar hooks genéricos de IA sin verdad personal detrás. Nuestro proceso empieza con la historia real del entrenador — sin eso, no arrancamos.
+      </div>
+      <div class="error-item">
+        <strong>Obsesión por la viralidad</strong>
+        Perseguir vistas en lugar de DMs de leads calificados. Cada pieza de contenido se diseña para filtrar, no para entretener.
+      </div>
+      <div class="error-item">
+        <strong>Base negativa</strong>
+        Avatar mediocre + oferta genérica = más contenido, peores resultados. Primero la matemática, luego el contenido.
+      </div>
+      <div class="error-item">
+        <strong>Falta de SOPs</strong>
+        El entrenador queda dependiendo de nosotros para siempre. Entregamos el sistema documentado para que pueda operarlo solo.
+      </div>
+      <div class="error-item">
+        <strong>Saltar a escala sin validación</strong>
+        Muchos quieren contratar setters antes de haber cerrado sus primeras 3 ventas manualmente. Primero valida, después escala.
+      </div>
+    </div>
+  </div>
+
+  <!-- CLIENTE IDEAL -->
+  <div class="section">
+    <div class="section-label">08 — Cliente ideal</div>
+    <h2>A quién le vendemos esto.</h2>
+    <p>El Digital Operator Pack no es para todos. Es para entrenadores que cumplen estos criterios:</p>
+
+    <ul class="phase-items" style="margin-top:16px;">
+      <li><span>Lleva mínimo 2 años entrenando presencialmente</span> con resultados documentados en clientes reales</li>
+      <li><span>Tiene reconocimiento local</span> — la gente del gym sabe quién es, lo recomiendan</li>
+      <li><span>Factura al menos $1,000 USD/mes presencial</span> y quiere multiplicarlo sin más horas</li>
+      <li><span>Puede invertir entre $1,500 y $3,500 USD</span> en construir su sistema digital</li>
+      <li><span>Está dispuesto a aparecer en cámara</span> y ser el rostro de su marca (no busca anonimato)</li>
+      <li><span>Tiene al menos un resultado transformador</span> que pueda convertirse en caso de éxito público</li>
+    </ul>
+  </div>
+
+  <div class="footer">
+    <span>Digital Operator Pack v1.0</span>
+    <span>Generado con Claude AI — Marzo 2026</span>
+  </div>
+
+</div>
+</body>
+</html>
