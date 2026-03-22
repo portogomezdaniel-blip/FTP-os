@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Master Brief — Holding IA de Allver</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Mono:wght@300;400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root { --black:#0a0a0a;--white:#f5f2ec;--gold:#c9a84c;--gold-light:#e8c96a;--orange:#d4622a;--gray:#777;--border:#1e1e1e; }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{background:var(--black);color:var(--white);font-family:'DM Mono',monospace;font-size:13px;line-height:1.8;}
+  .wrap{max-width:860px;margin:0 auto;padding:60px 32px 120px;}
+  .chip{display:inline-block;font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);border:1px solid var(--gold);padding:3px 10px;margin-bottom:20px;}
+  h1{font-family:'Syne',sans-serif;font-size:clamp(32px,5vw,56px);font-weight:800;line-height:1;letter-spacing:-.02em;margin-bottom:12px;}
+  h1 em{font-family:'Instrument Serif',serif;font-style:italic;color:var(--gold);font-weight:400;}
+  .lead{color:#999;max-width:600px;margin-top:12px;font-size:13px;}
+  hr{border:none;border-top:1px solid var(--border);margin:48px 0;}
+  h2{font-family:'Syne',sans-serif;font-size:22px;font-weight:700;margin-bottom:16px;color:var(--white);}
+  h3{font-family:'Syne',sans-serif;font-size:15px;font-weight:700;color:var(--gold-light);margin:28px 0 10px;}
+  p{color:#999;margin-bottom:14px;}
+  .section{margin-bottom:56px;}
+  .label{font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:10px;margin-bottom:28px;}
+  .label::after{content:'';flex:1;height:1px;background:var(--border);}
+  .card{background:#0f0f0f;border-left:2px solid var(--border);padding:20px 24px;margin-bottom:4px;transition:border-color .2s;}
+  .card:hover{border-left-color:var(--gold);}
+  .card-title{font-family:'Syne',sans-serif;font-size:14px;font-weight:700;color:var(--white);margin-bottom:6px;}
+  .card-body{color:#777;font-size:12px;}
+  .tag{display:inline-block;font-size:9px;letter-spacing:.12em;text-transform:uppercase;padding:2px 8px;border-radius:2px;margin-right:6px;margin-top:8px;}
+  .tag-active{background:#0a1a0a;color:#4ecb71;border:1px solid #1a2a1a;}
+  .tag-dev{background:#1a1a0a;color:var(--gold);border:1px solid #2a2a1a;}
+  .tag-future{background:#1a0a0a;color:#cb4e4e;border:1px solid #2a1a1a;}
+  table{width:100%;border-collapse:collapse;font-size:12px;margin-top:16px;}
+  th{text-align:left;padding:8px 14px;background:#111;color:var(--gold);font-size:9px;letter-spacing:.15em;text-transform:uppercase;border-bottom:1px solid var(--border);}
+  td{padding:10px 14px;border-bottom:1px solid #111;color:#888;vertical-align:top;}
+  td:first-child{color:var(--white);}
+  .highlight{background:#0d0d00;border:1px solid #2a2500;padding:20px 24px;margin:20px 0;color:#bbb;font-size:13px;}
+  .highlight strong{color:var(--gold-light);}
+  ul{list-style:none;margin-top:12px;}
+  ul li{color:#888;font-size:12px;padding:6px 0;border-bottom:1px solid #111;display:flex;gap:10px;}
+  ul li::before{content:'→';color:var(--gold);flex-shrink:0;}
+  ul li span{color:var(--white);}
+  .footer{border-top:1px solid var(--border);padding-top:24px;margin-top:60px;font-size:11px;color:#444;display:flex;justify-content:space-between;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="chip">DOC 00 — Master Brief</div>
+  <h1>Holding <em>IA</em><br>de Allver</h1>
+  <p class="lead">Contexto completo del proyecto para continuar en cualquier terminal o sesión nueva. Incluye visión, ventures activos, stack, cliente, y estado actual a Marzo 2026.</p>
+
+  <hr>
+
+  <!-- VISIÓN -->
+  <div class="section">
+    <div class="label">01 — Visión general</div>
+    <h2>Un holding de IA construido en paralelo.</h2>
+    <p>Allver está construyendo un holding de empresas de inteligencia artificial, donde cada venture opera en una vertical diferente pero comparte la misma infraestructura de IA. El principio central es que la IA no es el producto — es el sistema nervioso que hace posible que un equipo pequeño opere como una empresa grande.</p>
+    <p>La filosofía personal que guía todo es el framework LLVR (Living Like a Virtuous Rebel): la búsqueda de virtud combinada con ejecución radical. Cada decisión de negocio tiene que pasar ese filtro — ¿construye algo de valor real, o es solo noise?</p>
+  </div>
+
+  <!-- VENTURES -->
+  <div class="section">
+    <div class="label">02 — Ventures activos</div>
+    <h2>Los proyectos del holding.</h2>
+
+    <div class="card">
+      <div class="card-title">Awareness / Andrea Engine</div>
+      <div class="card-body">SaaS de automatización de ventas para PYMEs de LATAM (México, Colombia, Chile). El producto core es Andrea Engine: un agente de ventas IA 24/7 que opera por WhatsApp, email y web. Modelo de go-to-market por partners/referidos con comisiones recurrentes.</div>
+      <span class="tag tag-active">● Activo — core business</span>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Digital Operator Pack — Infoproductores</div>
+      <div class="card-body">Servicio de transformación digital para entrenadores presenciales de Medellín. Construido sobre el Sistema Carrizo. Entrega sistema completo en 30 días: identidad, contenido Instagram, funnel, landing, automatización de DMs con Andrea Engine. Precio: $1,500–$3,500 USD. Cliente piloto: Mauro (entrenador, Medellín).</div>
+      <span class="tag tag-dev">◐ En desarrollo — piloto con Mauro</span>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Food Trucks Platform</div>
+      <div class="card-body">Plataforma web para food trucks. Tiene landing de presentación de negocios hecha y sistema de menú digital deployado. Necesita backend, conexiones a APIs y features que lo hagan usable. Repositorio en GitHub, stack Next.js, deploy en Vercel.</div>
+      <span class="tag tag-dev">◐ En desarrollo — necesita backend</span>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Amethyst Protocol</div>
+      <div class="card-body">Programa fitness co-fundado con otra trainer, dirigido a mujeres que empiezan a entrenar. Incluye landing page, knowledge base para AI responder, y infraestructura de WhatsApp assistant.</div>
+      <span class="tag tag-dev">◐ En construcción</span>
+    </div>
+
+    <div class="card">
+      <div class="card-title">ARCHÉ / CLARITY — Suplementos</div>
+      <div class="card-body">Marca de suplementos para el mercado hispano de biohacking. Productos explorados: Methylene Blue, CBG (cannabigerol). Marco regulatorio LATAM investigado. Brand voice: ciencia + performance + identidad.</div>
+      <span class="tag tag-future">○ Fase de investigación</span>
+    </div>
+
+  </div>
+
+  <!-- CLIENTE MAURO -->
+  <div class="section">
+    <div class="label">03 — Cliente piloto: Mauro</div>
+    <h2>El caso de uso real para el Digital Operator Pack.</h2>
+
+    <div class="highlight">
+      <strong>Quién es Mauro:</strong> Entrenador personal reconocido en Medellín. Presencial, entrena en gimnasios de la ciudad. Tiene renombre local y gana bien. Problema: cero presencia digital, todo su ingreso está atado a sus horas de entrenamiento.
+    </div>
+
+    <ul>
+      <li><span>Landing page construida</span> — ya existe, deployada</li>
+      <li><span>Panel de creadores en Vercel</span> — https://allver-social-dashboard.vercel.app/agents (Next.js)</li>
+      <li><span>Lead magnet + encuesta</span> — en proceso</li>
+      <li><span>Siguiente paso</span> — backend del panel, conectar Instagram API, sistema de contenido</li>
+    </ul>
+  </div>
+
+  <!-- STACK -->
+  <div class="section">
+    <div class="label">04 — Stack tecnológico</div>
+    <h2>Las herramientas del holding.</h2>
+
+    <table>
+      <thead><tr><th>Herramienta</th><th>Rol</th><th>Proyecto</th></tr></thead>
+      <tbody>
+        <tr><td>Claude AI / Claude Code</td><td>Generación de contenido, código, automatizaciones, landing pages</td><td>Todos</td></tr>
+        <tr><td>Claude Max 200</td><td>Plan activo — acceso ilimitado</td><td>Todos</td></tr>
+        <tr><td>Next.js</td><td>Framework frontend para apps y paneles</td><td>Food Trucks, Panel Creadores</td></tr>
+        <tr><td>Vercel</td><td>Deploy automático desde GitHub</td><td>Todos los web projects</td></tr>
+        <tr><td>Supabase</td><td>Auth, base de datos, CRM ligero</td><td>Panel Creadores</td></tr>
+        <tr><td>Andrea Engine</td><td>Setter IA en DMs de WhatsApp e Instagram</td><td>Awareness, Digital Operator</td></tr>
+        <tr><td>n8n</td><td>Automatización de workflows</td><td>Awareness</td></tr>
+        <tr><td>Instagram Graph API</td><td>Conexión panel creadores</td><td>Panel Creadores</td></tr>
+        <tr><td>Meta Business API</td><td>Datos de ads y analytics</td><td>Panel Creadores</td></tr>
+        <tr><td>Canva</td><td>Producción visual carruseles, templates</td><td>Digital Operator</td></tr>
+        <tr><td>Loom / YouTube</td><td>Video de nutrición — activo evergreen</td><td>Digital Operator</td></tr>
+        <tr><td>Cal.com / Calendly</td><td>Agendamiento post-funnel</td><td>Digital Operator</td></tr>
+        <tr><td>Notion</td><td>Dashboard operativo y SOPs</td><td>Todos</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- URLS ACTIVAS -->
+  <div class="section">
+    <div class="label">05 — URLs activas en producción</div>
+    <h2>Deployments existentes.</h2>
+
+    <table>
+      <thead><tr><th>URL</th><th>Qué es</th><th>Stack</th></tr></thead>
+      <tbody>
+        <tr><td>allver-social-dashboard.vercel.app</td><td>Panel de creadores — todas las secciones</td><td>Next.js + Vercel</td></tr>
+        <tr><td>allver-social-dashboard.vercel.app/agents</td><td>Sección agents del panel</td><td>Next.js</td></tr>
+        <tr><td>calamus-merch.vercel.app</td><td>Ecommerce merchandising + Cotizador IA Gemini</td><td>Next.js</td></tr>
+        <tr><td>calamus-agenda.vercel.app</td><td>Lead magnet + agendamiento de asesoría</td><td>HTML + Vercel</td></tr>
+      </tbody>
+    </table>
+    <p style="margin-top:16px;font-size:11px;color:#555;">El panel tiene 6 secciones: /instagram, /analytics, /calendar, /competitors, /news, /agents</p>
+  </div>
+
+  <!-- CONTEXTO PERSONAL -->
+  <div class="section">
+    <div class="label">06 — Contexto personal relevante</div>
+    <h2>Quién es Allver.</h2>
+    <p>Venezolano. CEO y constructor. Comunicación directa, sin filler, en español casual. TDAH — trabaja mejor con sistemas claros, entregables concretos y momentum. Performance-oriented: entrenando hacia Hyrox sub-66 minutos. Framework personal LLVR (Living Like a Virtuous Rebel). Intereses intelectuales: psicología Jungiana, filosofía Estoica, Neville Goddard, historia Gnóstica.</p>
+    <p>Patrón de trabajo identificado: construye sistemas y assets en múltiples ventures simultáneamente. Prefiere flujos modulares donde Claude genera prompts y skills reutilizables. Trabaja iterativamente con mensajes cortos y espera que Claude extrapole las implicaciones completas desde input mínimo.</p>
+  </div>
+
+  <!-- ESTADO SESIÓN -->
+  <div class="section">
+    <div class="label">07 — Estado al cierre de esta sesión</div>
+    <h2>Dónde quedamos el 21 de Marzo 2026.</h2>
+
+    <ul>
+      <li><span>Digital Operator Pack estructurado</span> — producto completo en 8 secciones, precios definidos ($1,500–$3,500), stack claro</li>
+      <li><span>Sistema Carrizo procesado</span> — blueprint completo extraído con Gemini + NotebookLM y adaptado a contexto LATAM</li>
+      <li><span>Panel de creadores</span> — necesita backend (Supabase auth + Instagram API + Meta API). Ver DOC 03 para prompts exactos de Claude Code</li>
+      <li><span>Food Trucks</span> — tiene landing, necesita backend y features. Pendiente de esta semana</li>
+      <li><span>Mauro</span> — cliente piloto activo. Landing hecha, siguiente paso es sistema de contenido y activar el Digital Operator Pack completo</li>
+    </ul>
+  </div>
+
+  <div class="footer">
+    <span>Master Brief v1.0 — Holding IA Allver</span>
+    <span>Generado con Claude AI — 21 Marzo 2026</span>
+  </div>
+
+</div>
+</body>
+</html>

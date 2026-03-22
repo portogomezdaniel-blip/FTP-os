@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blueprint Carrizo — Sistema Completo</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Mono:wght@300;400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root{--black:#0a0a0a;--white:#f5f2ec;--gold:#c9a84c;--gold-light:#e8c96a;--orange:#d4622a;--gray:#777;--border:#1e1e1e;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{background:var(--black);color:var(--white);font-family:'DM Mono',monospace;font-size:13px;line-height:1.85;}
+  .wrap{max-width:860px;margin:0 auto;padding:60px 32px 120px;}
+  .chip{display:inline-block;font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);border:1px solid var(--gold);padding:3px 10px;margin-bottom:20px;}
+  h1{font-family:'Syne',sans-serif;font-size:clamp(32px,5vw,52px);font-weight:800;line-height:1;letter-spacing:-.02em;margin-bottom:12px;}
+  h1 em{font-family:'Instrument Serif',serif;font-style:italic;color:var(--gold);font-weight:400;}
+  .lead{color:#999;max-width:600px;font-size:13px;margin-top:10px;}
+  hr{border:none;border-top:1px solid var(--border);margin:48px 0;}
+  h2{font-family:'Syne',sans-serif;font-size:20px;font-weight:700;margin-bottom:14px;}
+  h3{font-family:'Syne',sans-serif;font-size:14px;font-weight:700;color:var(--gold-light);margin:24px 0 10px;}
+  p{color:#999;margin-bottom:14px;}
+  .section{margin-bottom:56px;}
+  .label{font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:10px;margin-bottom:28px;}
+  .label::after{content:'';flex:1;height:1px;background:var(--border);}
+  .formula{background:#0d0d00;border:1px solid #2a2500;padding:20px 24px;margin:20px 0;font-family:'Instrument Serif',serif;font-size:22px;color:var(--gold-light);text-align:center;letter-spacing:.05em;}
+  .formula sub{font-size:12px;color:#888;font-family:'DM Mono',monospace;}
+  .block{background:#0f0f0f;border-left:2px solid var(--border);padding:18px 22px;margin-bottom:4px;}
+  .block-title{font-family:'Syne',sans-serif;font-size:13px;font-weight:700;color:var(--white);margin-bottom:8px;}
+  .block-body{color:#777;font-size:12px;}
+  .warning{background:#110808;border-left:3px solid var(--orange);padding:16px 20px;margin:16px 0;font-size:12px;color:#888;}
+  .warning strong{color:var(--orange);display:block;margin-bottom:4px;font-family:'Syne',sans-serif;}
+  .insight{background:#080d11;border-left:3px solid #4e8ecb;padding:16px 20px;margin:16px 0;font-size:12px;color:#888;}
+  .insight strong{color:#7ab3e8;display:block;margin-bottom:4px;font-family:'Syne',sans-serif;}
+  table{width:100%;border-collapse:collapse;font-size:12px;margin-top:16px;}
+  th{text-align:left;padding:8px 14px;background:#111;color:var(--gold);font-size:9px;letter-spacing:.15em;text-transform:uppercase;border-bottom:1px solid var(--border);}
+  td{padding:10px 14px;border-bottom:1px solid #111;color:#888;vertical-align:top;}
+  td:first-child{color:var(--white);}
+  .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;margin-top:20px;}
+  .kpi{background:#111;padding:20px 16px;text-align:center;}
+  .kpi-val{font-family:'Syne',sans-serif;font-size:26px;font-weight:800;color:var(--gold);display:block;}
+  .kpi-label{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--gray);}
+  .phase-num{font-size:9px;letter-spacing:.2em;color:var(--gold);display:block;margin-bottom:6px;}
+  .footer{border-top:1px solid var(--border);padding-top:24px;margin-top:60px;font-size:11px;color:#444;display:flex;justify-content:space-between;}
+  @media(max-width:600px){.kpis{grid-template-columns:1fr 1fr;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="chip">DOC 01 — Blueprint Carrizo</div>
+  <h1>Sistema <em>Carrizo</em><br>Completo</h1>
+  <p class="lead">Todos los datos, frameworks, metodologías y números del sistema extraídos del video de 8 horas. Fuente: Deep Research Gemini + NotebookLM. Procesado Marzo 2026.</p>
+
+  <hr>
+
+  <!-- FILOSOFÍA -->
+  <div class="section">
+    <div class="label">01 — Filosofía base</div>
+    <h2>El Marketing de Admiración y el Colapso de 2026.</h2>
+    <p>Este es el argumento central del sistema: para 2026, la información dejó de tener valor comercial porque la IA la hizo gratuita y ubícua. Los entrenadores que venden "rutinas" o "conocimiento" están vendiendo un commodity. El mercado ya no paga por saber qué hacer — paga por Implementación y Autoridad.</p>
+    <p>El modelo de interrupción tradicional (quemar dinero en Ads para perseguir extraños) es una hemorragia de capital. El futuro pertenece al Marketing de Admiración: cuando el prospecto te admira, no cuestiona el precio. La admiración elimina la resistencia a la compra.</p>
+    <p>La coherencia radical entre la vida privada y la marca pública es el activo más caro. No se vende fitness — se vende una visión del mundo.</p>
+
+    <div class="insight">
+      <strong>Adaptación para tu contexto</strong>
+      Esto se vuelve tu argumento de venta al entrenador: "El mercado ya no paga por tus rutinas. Paga por tu transformación." Ese es el hook de entrada para conseguir clientes del Digital Operator Pack.
+    </div>
+  </div>
+
+  <!-- FÓRMULA -->
+  <div class="section">
+    <div class="label">02 — La ecuación matemática</div>
+    <h2>Framework A + O × C = Ventas.</h2>
+    <p>El Sistema Carrizo tiene una fórmula matemática central. No es metáfora — es la arquitectura de decisiones del negocio. Entenderla es entender por qué la mayoría falla aunque tenga buen contenido.</p>
+
+    <div class="formula">
+      A + O × C = Ventas
+      <br>
+      <sub>Avatar + Oferta × Comunicación</sub>
+    </div>
+
+    <p>La lógica del "Base Negativa" es la parte más importante: si el Avatar o la Oferta son genéricos o débiles, una buena Comunicación solo multiplica el fracaso. Ejemplo concreto del sistema: Avatar mediocre (-3) + Oferta genérica (-5) × Comunicación excelente (10) = -53. No importa qué tan buenos sean los Reels si la base matemática es negativa.</p>
+
+    <div class="warning">
+      <strong>Error fatal #1 — Saltarse la base matemática</strong>
+      El error más común: empezar a crear contenido antes de tener el Avatar y la Oferta definidos con precisión. Carrizo insiste: primero la matemática, después el contenido. Siempre.
+    </div>
+
+    <h3>Los tres componentes</h3>
+
+    <div class="block">
+      <div class="block-title">A — Avatar (Quién es el cliente)</div>
+      <div class="block-body">No es demografía genérica. Es el perfil quirúrgico del cliente ideal. Debe incluir sus problemas específicos (no genéricos), sus deseos aspiracionales reales, las objeciones exactas que usará, y el lenguaje que usa para describir su propio problema. Cuanto más específico, más eliminas la comparación por precio.</div>
+    </div>
+
+    <div class="block">
+      <div class="block-title">O — Oferta (El vehículo de transformación único)</div>
+      <div class="block-body">No es un servicio de entrenamiento. Es un protocolo con nombre propio, promesa específica, y resultado medible. La especificidad es el escudo contra la competencia. A mayor especificidad, mayor precio posible. Ejemplo del sistema: "Protocolo de Optimización Biológica para CEOs" vs "Entrenamiento personalizado".</div>
+    </div>
+
+    <div class="block">
+      <div class="block-title">C — Comunicación (El multiplicador)</div>
+      <div class="block-body">Todo el contenido, copy, hooks, stories, DMs. Es el multiplicador de los otros dos. Con base positiva, la comunicación escala el negocio. Con base negativa, acelera el fracaso. La comunicación auténtica (basada en experiencia real) supera siempre a la comunicación estratégica (basada en fórmulas copiadas).</div>
+    </div>
+  </div>
+
+  <!-- AVATAR -->
+  <div class="section">
+    <div class="label">03 — El Micro-micronicho</div>
+    <h2>Cómo construir el Avatar para High-Ticket.</h2>
+    <p>Para cobrar entre $1,000 y $5,000 o más, la especificidad debe ser quirúrgica. La especificidad elimina la comparación por precio porque el prospecto siente que el producto fue creado exactamente para él.</p>
+
+    <table>
+      <thead><tr><th>Variable</th><th>Descripción</th><th>Ejemplo (Fitness ejecutivos)</th></tr></thead>
+      <tbody>
+        <tr><td>Avatar</td><td>Perfil específico con datos concretos</td><td>Hombres 25–45 años, +8h de oficina, temen que su declive físico afecte su autoridad laboral</td></tr>
+        <tr><td>Problemas reales</td><td>Los que el cliente nombra en voz alta</td><td>Bajos niveles de testosterona, fatiga crónica, pérdida de la identidad de "ganador"</td></tr>
+        <tr><td>Deseos aspiracionales</td><td>Lo que quiere de verdad, no lo que dice querer</td><td>Recuperar el físico de los 20s para liderar con energía y ser ejemplo para sus hijos</td></tr>
+        <tr><td>Objeciones reales</td><td>Las excusas que usará para no comprar</td><td>"No tengo tiempo", "Ya lo intenté con un gym local", "Mi metabolismo ya no responde"</td></tr>
+        <tr><td>Oferta resultante</td><td>El nombre del protocolo específico</td><td>Protocolo de Optimización Biológica para CEOs: resultados sin depender de horarios de gimnasio</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- DIAGNÓSTICO -->
+  <div class="section">
+    <div class="label">04 — Fase 0: Diagnóstico</div>
+    <h2>El Método "The Old Kid" y la Alquimia de la Adversidad.</h2>
+    <p>Antes de tocar una sola red social, se desmantela la identidad actual del entrenador para encontrar su verdad radical. Un negocio es el reflejo exacto de la psique de su fundador. La facturación jamás supera el desarrollo personal del creador.</p>
+    <p>El Método "The Old Kid" busca recuperar la audacia del principiante con la sabiduría del experto. Carrizo descubrió su capacidad de guía no en un manual sino en programas de recuperación (AA). Su propia adversidad forjó su talento natural. Eso es el verdadero producto — no el conocimiento de fitness.</p>
+
+    <h3>Los tres pasos del diagnóstico</h3>
+    <p>La Auditoría de Crisis consiste en identificar el punto más bajo del entrenador (su "Alemania personal") y la habilidad que le permitió sobrevivir. Esa habilidad es el verdadero producto. La Reprogramación de Realidad elimina las creencias de "empleado" — el entrenador no da clases, diseña transformaciones. La Alineación de Verdad verifica que el entrenador vive lo que predica, porque si no, el marketing tendrá "ruido cognitivo" que el cliente detecta como inautenticidad.</p>
+
+    <div class="warning">
+      <strong>Si no hay coherencia personal, el sistema no funciona</strong>
+      Carrizo es muy directo en esto: si el entrenador no vive la vida que predica, la audiencia detecta el fraude. El High-Ticket requiere autoridad real, no autoridad fabricada.
+    </div>
+  </div>
+
+  <!-- INSTAGRAM -->
+  <div class="section">
+    <div class="label">05 — Fase 2: Instagram</div>
+    <h2>Instagram como motor operativo, no red social.</h2>
+    <p>El error fatal según Carrizo es crear contenido para entretener. El sistema hace marketing para calificar. Cada pieza de contenido debe filtrar a los leads incorrectos y atraer a los correctos, no maximizar vistas.</p>
+
+    <h3>La Dampa Account</h3>
+    <p>Una cuenta secundaria de Instagram usada exclusivamente para entrenar al algoritmo. Se siguen solo referentes del nicho (preferiblemente anglosajones que llevan más tiempo en el mercado digital). Es un laboratorio de I+D para observar tendencias, formatos, y hooks antes de implementarlos. Nunca se mezcla con el consumo de contenido normal.</p>
+
+    <h3>Los tres pilares de contenido</h3>
+    <p>Los Reels de Identidad y Visión usan experiencias reales y valores no negociables del entrenador para generar viralidad basada en personalidad, no en guiones genéricos. Los Carruseles de Autoridad y Resultados son validación técnica y despliegue de casos de éxito (social proof). Las Stories son el motor de conversación diaria donde ocurre la venta — se usan para incitar DMs y detectar leads calientes.</p>
+
+    <div class="insight">
+      <strong>Dato clave de Carrizo</strong>
+      "El algoritmo no elige la mejor estrategia, elige al que es diferente." La comunicación debe nacer de la experiencia real, incluso si es vulnerable. Si no hay disposición a mostrar la verdad, nunca habrá mercado High-Ticket.
+    </div>
+  </div>
+
+  <!-- FUNNEL -->
+  <div class="section">
+    <div class="label">06 — Fase 3: Funnel</div>
+    <h2>El Loom Tutorial y la Relación de Deuda.</h2>
+    <p>El "Evergreen Value" separa al auto-empleado del Vision CEO. Son activos que educan y pre-venden sin presencia física del entrenador. El activo más potente del sistema es un video Loom de entre 27 y 31 minutos.</p>
+
+    <h3>¿Por qué 27–31 minutos exactamente?</h3>
+    <p>Ese rango filtra a los curiosos — solo un lead con alta intención ve ese video completo. Al entregar valor técnico masivo antes de la venta, se crea una "Relación de Deuda" psicológica: el prospecto siente que ya le has ayudado tanto que la llamada de ventas es el paso lógico, no una venta agresiva.</p>
+
+    <h3>Estructura del Loom</h3>
+    <p>El video tiene tres partes. Primero educación técnica: explicar el "cómo" del método único del entrenador con profundidad real. Segundo construcción de confianza: demostrar que eres el mayor experto en el problema específico del avatar. Tercero calificación: establecer explícitamente quién no es apto para trabajar contigo, lo que paradójicamente aumenta el deseo de quienes sí califican.</p>
+
+    <h3>El flujo completo del lead</h3>
+    <p>Instagram atrae → DM califica → Loom/VLS nutre y crea deuda → Llamada de ventas cierra. Cada etapa tiene un trabajo específico y no se saltea ninguna.</p>
+  </div>
+
+  <!-- EQUIPO -->
+  <div class="section">
+    <div class="label">07 — Fase 5: El Dream Team</div>
+    <h2>Escalar a $150,000/mes con 4 personas.</h2>
+    <p>El objetivo final del sistema es lograr libertad absoluta: $150,000 mensuales con un ROI de Tiempo de 4 horas semanales para el fundador. Para ese nivel solo se necesitan 4 personas con un ratio 4:1.</p>
+
+    <div class="block">
+      <div class="block-title">Setters — especialistas en DMs</div>
+      <div class="block-body">Califican leads y agendan llamadas de venta. Deben ser una extensión del alma y visión del fundador. No son operadores de scripts — son embajadores de la identidad de la marca. Si el setter no encarna los valores del fundador, los leads lo detectan y no avanzan.</div>
+    </div>
+
+    <div class="block">
+      <div class="block-title">Closers — expertos en High-Ticket</div>
+      <div class="block-body">Su prioridad es el "Fit" sobre el "Cash". En 2025, Carrizo tuvo cero reembolsos porque sus Closers rechazaban activamente a quien no encajaba con el perfil ideal. Un cliente incorrecto cuesta más que lo que paga — en tiempo, energía, y reputación.</div>
+    </div>
+
+    <div class="block">
+      <div class="block-title">Coach / Fulfillment</div>
+      <div class="block-body">Entrega los resultados para que el servicio no dependa de la presencia física del fundador. El fundador solo tiene dos tareas en esta fase: Visión Estratégica y Creación de Contenido Auténtico. Cualquier otra cosa es desperdicio de tiempo del fundador.</div>
+    </div>
+
+    <div class="insight">
+      <strong>Adaptación IA para tu sistema</strong>
+      El Dream Team humano de Carrizo se puede reemplazar inicialmente con un Dream Stack de IA: Andrea Engine como setter, Claude Code para fulfillment parcial, y tú como el único closer. Esto permite validar el modelo antes de contratar personas.
+    </div>
+  </div>
+
+  <!-- RADAR -->
+  <div class="section">
+    <div class="label">08 — Framework RADAR</div>
+    <h2>El panel de control del negocio.</h2>
+    <p>Lo que no se mide no se optimiza. El RADAR es el sistema de diagnóstico para evitar puntos ciegos en cualquier etapa del negocio.</p>
+
+    <div class="block"><div class="block-title">R — Revisión de Métricas</div><div class="block-body">Recolectar datos objetivos semanalmente sin interpretación prematura.</div></div>
+    <div class="block"><div class="block-title">A — Análisis de Patrones</div><div class="block-body">Identificar qué contenido atrae a los mejores leads (los que compran sin fricción).</div></div>
+    <div class="block"><div class="block-title">D — Detección de Cuellos de Botella</div><div class="block-body">¿Falla la atracción (pocos DMs), la nutrición (nadie ve el Loom), o el cierre (llamadas sin conversión)?</div></div>
+    <div class="block"><div class="block-title">A — Auditoría de Coherencia</div><div class="block-body">¿Sigue el equipo comunicando la verdad radical del fundador? ¿O está derivando hacia mensajes genéricos?</div></div>
+    <div class="block"><div class="block-title">R — Reportes y SOPs</div><div class="block-body">Documentar cada proceso para que el sistema sea independiente de las personas. Sin SOPs, el negocio muere si alguien se va.</div></div>
+
+    <h3>KPIs críticos</h3>
+    <div class="kpis">
+      <div class="kpi"><span class="kpi-val">DM Vol</span><span class="kpi-label">Conversaciones iniciadas por contenido</span></div>
+      <div class="kpi"><span class="kpi-val">Set %</span><span class="kpi-label">Chats que agendan llamada</span></div>
+      <div class="kpi"><span class="kpi-val">Close %</span><span class="kpi-label">Llamadas que cierran (priorizar fit)</span></div>
+      <div class="kpi"><span class="kpi-val">ROI⏱</span><span class="kpi-label">Horas fundador vs facturación total</span></div>
+    </div>
+  </div>
+
+  <!-- ERRORES -->
+  <div class="section">
+    <div class="label">09 — Los 5 errores fatales</div>
+    <h2>Por qué el 90% del mercado falla.</h2>
+
+    <div class="warning"><strong>Error 1 — Inautenticidad</strong>Copiar hooks o personalidades de otros. La falta de verdad destruye el High-Ticket porque la audiencia detecta el fraude a nivel subconsciente. El contenido copiado puede funcionar para views pero jamás para ventas de $2,000+.</div>
+    <div class="warning"><strong>Error 2 — Obsesión por la viralidad</strong>Priorizar vistas genéricas sobre leads calificados. Un video con 500k vistas del avatar incorrecto genera cero ventas. Un video con 5k vistas del avatar correcto puede generar $15,000.</div>
+    <div class="warning"><strong>Error 3 — Falta de SOPs</strong>No documentar procesos convierte el negocio en un caos dependiente del fundador. Sin SOPs, escalar es imposible y el burnout es inevitable.</div>
+    <div class="warning"><strong>Error 4 — Incoherencia personal</strong>No vivir la vida que predicas. La audiencia detecta el fraude. Para High-Ticket, la autoridad debe ser real.</div>
+    <div class="warning"><strong>Error 5 — Ignorar el talento único</strong>Intentar vender modelos de dinero rápido en lugar de la experiencia transformadora real del entrenador. El verdadero producto siempre es la adversidad resuelta, no el conocimiento técnico.</div>
+  </div>
+
+  <div class="footer">
+    <span>Blueprint Carrizo v1.0 — Procesado con Gemini + NotebookLM</span>
+    <span>21 Marzo 2026</span>
+  </div>
+
+</div>
+</body>
+</html>
